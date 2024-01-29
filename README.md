@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Teste Técnico - Construção de E-commerce com React, Vite, TypeScript e Bootstrap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é parte de um teste técnico para a construção de um site modelo de e-commerce usando React, Vite, TypeScript e Bootstrap.
 
-Currently, two official plugins are available:
+## Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto consiste em um e-commerce com as seguintes funcionalidades:
 
-## Expanding the ESLint configuration
+- Listagem de produtos com opção de adição ao carrinho.
+- Exibição sempre atualizada da quantidade de itens no carrinho.
+- Utilização do Context API para gerenciar o carrinho.
+- Carrinho de compras funcional que exibe os produtos adicionados.
+- Processo de checkout simples com resumo dos itens e totalizador de preço.
+- Armazenamento dos produtos do carrinho no local storage.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instruções para Rodar o Projeto
+Pré-requisitos
+Node.js instalado (versão 14 ou superior)
+npm ou yarn instalado
+Passos para Execução
+Clonar o repositório:
+git clone https://github.com/galdinorenantruta/Movisis-e-commerce.git
 
-- Configure the top-level `parserOptions` property like this:
+Instalar as dependências:
+Navegue até o diretório do projeto e execute o seguinte comando no terminal:
+cd nome-do-repositorio
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+npm install   # ou yarn install
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Rodar a aplicação:
+
+Execute o seguinte comando para iniciar o servidor de desenvolvimento:
+npm run dev   # ou yarn dev
+Isso iniciará a aplicação em modo de desenvolvimento. Abra  http://localhost:5173/ no seu navegador para visualizar o projeto.
+
