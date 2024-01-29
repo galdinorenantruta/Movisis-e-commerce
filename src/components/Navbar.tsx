@@ -7,18 +7,18 @@ import {
   Button,
 } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import { useCartContext, CartContext } from "../context/CartContext"
+import { useCartContext, CartContextType } from "../context/CartContext"
 
 const Navbar = () => {
-  const { openCart, cartQuantity } = useCartContext() as CartContext
+  const { openCart, cartQuantity } = useCartContext() as CartContextType
 
   return (
     <BootstrapNavbar sticky="top" className="bg-white shadow-sm mb-3">
       <Container>
         <Nav className="me-auto ">
-          <NavLink to={"/"}>Home</NavLink>
+          <NavLink to={"/home"}>Home</NavLink>
           <NavLink className="mx-4"to={"/about"}>About</NavLink>
-          <NavLink className="mx-2" to={"/store"}>Store</NavLink>
+          <NavLink className="mx-2" to={"/"}>Store</NavLink>
         </Nav>
         
            <Button

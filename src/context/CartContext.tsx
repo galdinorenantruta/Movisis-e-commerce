@@ -17,6 +17,7 @@ type CartProviderProps = {
     increaseCartQuantity: (id: number) => void
     decreaseCartQuantity: (id: number) => void
     removeFromCart: (id: number) => void
+    clearCart: () => void
     cartQuantity: number
     cartItems: CartItem[]
   }
@@ -79,8 +80,12 @@ export function CartProvider({children}: CartProviderProps){
         })
       }
 
+      function clearCart() {
+        setCartItems([]); 
+      }
+
     return(
-        <CartContext.Provider value={{getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, cartItems, cartQuantity, openCart, closeCart}}>
+        <CartContext.Provider value={{getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, clearCart, cartItems, cartQuantity, openCart, closeCart}}>
             {children}
             <ShoppingCart isOpen={isOpen}/>
         </CartContext.Provider>
