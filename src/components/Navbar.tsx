@@ -12,10 +12,10 @@ const Navbar = () => {
   return (
     <BootstrapNavbar sticky="top" className="bg-white shadow-sm mb-3">
       <Container>
-        <Nav className="me-auto">
+        <Nav className="me-auto ">
           <NavLink to={"/"}>Home</NavLink>
-          <NavLink to={"/about"}>Home</NavLink>
-          <NavLink to={"/store"}>Home</NavLink>
+          <NavLink className="mx-4"to={"/about"}>About</NavLink>
+          <NavLink className="mx-2" to={"/store"}>Store</NavLink>
         </Nav>
         <Button
           style={{ width: "3rem", height: "3rem", position: "relative" }}
