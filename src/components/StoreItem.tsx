@@ -1,6 +1,6 @@
 import { Button, Card } from "react-bootstrap"
 import { useCartContext } from "../context/CartContext"
-import { CartContext } from "../context/CartContext"
+import { CartContextType } from "../context/CartContext"
 
 type StoreItemProps = {
     id: number
@@ -10,7 +10,7 @@ type StoreItemProps = {
   }
   
   export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
-    const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useCartContext() as CartContext
+    const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useCartContext() as CartContextType
     const quantity = getItemQuantity(id)
 
     return (
